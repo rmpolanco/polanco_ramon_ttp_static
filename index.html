@@ -2,13 +2,36 @@
 <html>
 	<head>
   
-		<title>TTP Test!</title>
+		<title>About Me!</title>
     
 	</head>
 
 	<body>
 
 		<h1 style = "text-align:center"> Hi! My name is Ramon Polanco and my favorite hobby is playing open-world sandbox games.</h1>
-    
+		
+    		<h2 id="time" style = "text-align:center"> </h2>
+
+		<script>
+
+			function displayTime() 
+				{
+					//Instantiates a new Date object representing the current time and date
+				let now = new Date();
+
+					//Converts the Date variable above into a string in the form of 'h:m:s AM/PM'
+				var time = now.toLocaleTimeString();
+
+					//Changes the contents of h2 heading (with the 'time' ID) to show the current time
+				document.getElementById("time").innerHTML = 'The current time is: ' + time;
+				}
+					//Runs the above function for the first time
+				displayTime();
+
+					// Runs the function every second starting after the first
+				setInterval(displayTime,1000);
+
+		</script>
+		
 	</body>
 </html>
